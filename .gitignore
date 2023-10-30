@@ -1,0 +1,35 @@
+# Compiled Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# C++ specific files
+*.gch
+*.pch
+*.d
+*.gcda
+*.gcno
+
+# Build folder
+build/
+
+# Dependency folder
+dependencies/
+
+# IDE specific files
+.vscode/
