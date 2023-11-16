@@ -33,3 +33,4 @@ dependencies/
 
 # IDE specific files
 .vscode/
+.DS_Store
