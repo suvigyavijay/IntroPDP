@@ -36,7 +36,7 @@ void isort(std::vector<short int>& Xi, MPI_Comm comm) {
         MPI_Isend(&Xi[i], 1, MPI_SHORT, send_rank, 0, comm, &requests[i]);
     }
 
-    // Send STOP tag to all ranks
+    // Send STOP marker to all ranks
     for (int i = 0; i < size; i++) {
         MPI_Request request;
         MPI_Isend(nullptr, 0, MPI_SHORT, i, 0, comm, &request);
@@ -49,9 +49,9 @@ void isort(std::vector<short int>& Xi, MPI_Comm comm) {
     std::vector<short int> vec_val1;
     std::vector<short int> vec_val2;
 
-    // Receive messages until STOP tag is received from all sources
-    int receivedStopTags = 0;
-    while (receivedStopTags < size) {
+    // Receive messages until STOP marker is received from all sources
+    int receivedStopMarkers = 0;
+    while (receivedStopMarkers < size) {
         MPI_Status status;
         MPI_Probe(MPI_ANY_SOURCE, 0, comm, &status);
 
@@ -64,9 +64,9 @@ void isort(std::vector<short int>& Xi, MPI_Comm comm) {
             // Perform the blocking receive into the buffer
             MPI_Recv(recv_val.data(), count, MPI_SHORT, status.MPI_SOURCE, 0, comm, MPI_STATUS_IGNORE);
 
-            // Check for STOP tag
+            // Check for STOP marker
             if (count == 0) {
-                receivedStopTags++;
+                receivedStopMarkers++;
             } else {
                 // Add received values to vec_val1 or vec_val2
                 for (int i = 0; i < recv_val.size(); i++) {
