@@ -39,27 +39,11 @@ int main(int argc, char* argv[]) {
 
     //std::random_device rd;
     //std::mt19937 g(rd());
-    std::mt19937 g(11113+rank);
+    std::mt19937 g(11113);
     std::uniform_int_distribution<short int> ui(-size + 1, size - 1);
     auto rng = std::bind(ui, g);
 
     std::generate(std::begin(x), std::end(x), rng);
-
-    if (rank == 0) {
-        printf("size %d\n", size);
-    }
-    
-    MPI_Barrier(MPI_COMM_WORLD);
-    
-    {
-        // print x before sorting
-        printf("===== before sorting: rank %d \n", rank);
-        for (int i = 0; i < x.size(); i++) {
-            printf("%d ", x[i]);
-        }
-        printf("=====\n");
-    }
-    MPI_Barrier(MPI_COMM_WORLD);
 
     MPI_Barrier(MPI_COMM_WORLD);
     auto t0 = MPI_Wtime();
@@ -68,16 +52,6 @@ int main(int argc, char* argv[]) {
 
     MPI_Barrier(MPI_COMM_WORLD);
     auto t1 = MPI_Wtime();
-    MPI_Barrier(MPI_COMM_WORLD);
-    {
-        // print x after sorting
-        printf("===== after sorting: rank %d \n", rank);
-        for (int i = 0; i < x.size(); i++) {
-            printf("%d ", x[i]);
-        }
-        printf("=====\n");
-    }
-    MPI_Barrier(MPI_COMM_WORLD);
 
     if (rank == 0) std::cout << (t1 - t0) << std::endl;
 
