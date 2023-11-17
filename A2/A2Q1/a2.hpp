@@ -78,7 +78,6 @@ void isort(std::vector<short int>& Xi, MPI_Comm comm) {
                         printf("ERROR: received value %d is not %d or %d\n", recv_val[i], val1, val2);
                     }
                 }
-                printf("\n");
             }
         }
     }
