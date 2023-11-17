@@ -34,9 +34,6 @@ void isort(std::vector<short int>& Xi, MPI_Comm comm) {
 
         // Non-blocking send the value to send_rank
         MPI_Isend(&Xi[i], 1, MPI_SHORT, send_rank, 0, comm, &requests[i]);
-
-        // Print the sent value with rank
-        printf("rank %d sent %d to rank %d\n", rank, Xi[i], send_rank);
     }
 
     // Send STOP tag to all ranks
