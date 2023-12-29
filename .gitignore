@@ -35,6 +35,10 @@ dependencies/
 *.pdf
 *.doc
 
+# Tarball of compiled files
+*.tar.gz
+*.tar
+
 # IDE specific files
 .vscode/
 .DS_Store
