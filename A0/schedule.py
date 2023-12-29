@@ -145,7 +145,7 @@ def make_commands(max_input_size, max_cpus, memory, arch):
 if __name__ == "__main__":
     # parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-sn", "--script_name", type=str, default="test.sh", help="Name of slurm script")
+    parser.add_argument("-sn", "--script_name", type=str, default="slurm.sh", help="Name of slurm script")
     parser.add_argument("-jn", "--job_name", type=str, default="test", help="Name of slurm job")
     parser.add_argument("-t", "--time", type=str, default="00:10:00", help="Time for slurm job")
     parser.add_argument("-n", "--nodes", type=str, default="1", help="Number of nodes for slurm job")
