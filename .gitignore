@@ -31,6 +31,10 @@ build/
 # Dependency folder
 dependencies/
 
+# PDF and DOC files
+*.pdf
+*.doc
+
 # IDE specific files
 .vscode/
 .DS_Store

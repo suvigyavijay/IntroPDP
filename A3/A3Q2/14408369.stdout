@@ -1,0 +1,85 @@
+JOB_ID=14408369
+hostname=cpn-q08-23.compute.cbls.ccr.buffalo.edu
+ARCH=avx512
+Fri Dec  8 11:06:53 PM UTC 2023
+Fri Dec  8 18:06:53 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  Off  | 00000000:3B:00.0 Off |                    0 |
+| N/A   27C    P0    24W / 250W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  Off  | 00000000:D8:00.0 Off |                    0 |
+| N/A   26C    P0    22W / 250W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+GPU INFO:
+name, driver_version, memory.total [MiB]
+Tesla V100-PCIE-32GB, 470.57.02, 32510 MiB
+Tesla V100-PCIE-32GB, 470.57.02, 32510 MiB
+
+Running on GPU with n=100000, h=0.1
+0.290517
+Running on GPU with n=200000, h=0.1
+0.645693
+Running on GPU with n=400000, h=0.1
+1.93003
+Running on GPU with n=1000000, h=0.1
+10.8483
+Running on GPU with n=2000000, h=0.1
+41.8382
+Running on GPU with n=4000000, h=0.1
+164.061
+Running on CPU with n=10000, h=0.1
+1.59746
+Running on GPU with n=10000, h=0.1
+0.19193
+Running on CPU with n=20000, h=0.1
+6.10711
+Running on GPU with n=20000, h=0.1
+0.150194
+Running on CPU with n=30000, h=0.1
+13.5638
+Running on GPU with n=30000, h=0.1
+0.167223
+Running on CPU with n=40000, h=0.1
+24.0891
+Running on GPU with n=40000, h=0.1
+0.19265
+Running on CPU with n=50000, h=0.1
+37.928
+Running on GPU with n=50000, h=0.1
+0.248566
+Running on CPU with n=60000, h=0.1
+54.6704
+Running on GPU with n=60000, h=0.1
+0.227493
+Running on CPU with n=70000, h=0.1
+73.6214
+Running on GPU with n=70000, h=0.1
+0.306826
+Running on CPU with n=80000, h=0.1
+96.1113
+Running on GPU with n=80000, h=0.1
+0.278146
+Running on CPU with n=90000, h=0.1
+121.67
+Running on GPU with n=90000, h=0.1
+0.32808
+Running on CPU with n=100000, h=0.1
+150.584
+Running on GPU with n=100000, h=0.1
+0.321961

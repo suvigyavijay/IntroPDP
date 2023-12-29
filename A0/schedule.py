@@ -22,6 +22,7 @@ def write_slurm_script(script_name, job_name, arch, time, nodes, memory, cpus, c
         f.write("####### select resources (here we specify required memory)\n")
         f.write("#SBATCH --mem=%s\n" % memory)
         f.write("#SBATCH --constraint=%s\n" % arch)
+        f.write("#SBATCH --constraint=CPU-Gold-6130\n")
         f.write("\n")
         f.write("####### make sure no other jobs are assigned to your nodes\n")
         f.write("#SBATCH --exclusive\n")

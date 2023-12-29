@@ -8,6 +8,7 @@
 ####### select resources (here we specify required memory)
 #SBATCH --mem=192G
 #SBATCH --constraint=AVX512
+#SBATCH --constraint=CPU-Gold-6130
 
 ####### make sure no other jobs are assigned to your nodes
 #SBATCH --exclusive

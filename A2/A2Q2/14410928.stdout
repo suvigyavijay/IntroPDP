@@ -1,0 +1,8 @@
+JOB_ID=14410928
+hostname=cpn-q06-31-01.compute.cbls.ccr.buffalo.edu
+ARCH=avx512
+Sat Dec  9 01:19:33 AM UTC 2023
+Running n=8000000
+2.8253
+Running n=10000000
+3.43321
